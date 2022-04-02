@@ -372,7 +372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ca68973a140da4a9b73a4d109d0d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 25
+  movementSpeed: 30
+  movementSmoothing: 0.12
   rigidbody2d: {fileID: 1538982533}
 --- !u!4 &1538982536 stripped
 Transform:
