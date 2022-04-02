@@ -162,8 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee2a1650ffd03f4ba6107353ed11bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 519420031}
   player: {fileID: 1538982536}
   smoothingSpeed: 0.125
+  maxDistance: 15
+  offsetZ: -10
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
