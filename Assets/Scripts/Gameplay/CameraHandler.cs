@@ -6,7 +6,7 @@ public class CameraHandler : MonoBehaviour
 {
     public Camera cam;
     public Transform player;
-    public float smoothingSpeed = 0.125f;
+    public float smoothingSpeed = 0.2f;
     public float maxDistance = 15f;
     public float offsetZ = -10;
 

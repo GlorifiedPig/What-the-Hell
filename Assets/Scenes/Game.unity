@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
   player: {fileID: 1538982536}
-  smoothingSpeed: 0.125
+  smoothingSpeed: 0.2
   maxDistance: 15
   offsetZ: -10
 --- !u!20 &519420031
