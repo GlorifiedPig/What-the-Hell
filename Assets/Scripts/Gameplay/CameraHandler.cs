@@ -6,7 +6,6 @@ public class CameraHandler : MonoBehaviour
 {
     public Camera cam;
     public Transform player;
-    public Transform shootPoint;
     public float smoothingSpeed = 0.2f;
     public float maxDistance = 15f;
     public float offsetZ = -10;
@@ -14,15 +13,8 @@ public class CameraHandler : MonoBehaviour
     private Vector3 smoothingVelocity;
     private Vector3 targetPosition;
 
-    private void ShootWeapon()
-    {
-        Debug.DrawRay( shootPoint.position, shootPoint.TransformDirection( Vector2.right ) * 25, Color.red, 1f );
-    }
-
     private void Update()
     {
-        if( Input.GetMouseButtonDown( 0 ) ) ShootWeapon();
-
         Vector3 mousePos = cam.ScreenToWorldPoint( Input.mousePosition );
         Vector3 position = ( player.position + mousePos ) / 2f;
 
