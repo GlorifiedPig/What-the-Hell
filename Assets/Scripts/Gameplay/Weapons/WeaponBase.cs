@@ -9,6 +9,7 @@ public class WeaponBase : MonoBehaviour
     public Transform playerTransform;
     public Transform weaponPivot;
     public Transform shootPoint;
+    public Collider2D shootPointCollider;
     public float weaponOffset = 5f;
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
@@ -26,7 +27,7 @@ public class WeaponBase : MonoBehaviour
 
     public virtual void Shoot()
     {
-        if( isReloading || ammo <= 0 || Time.time < nextShot ) return;
+        if( isReloading || ammo <= 0 || Time.time < nextShot || shootPointCollider.IsTouchingLayers() ) return;
 
         ammo = ammo - 1;
         nextShot = Time.time + timeBetweenShots;
