@@ -11,6 +11,7 @@ public class WeaponBase : MonoBehaviour
     public Transform shootPoint;
     public Collider2D shootPointCollider;
     public CrosshairHandler crosshairHandler;
+    public LayerMask raycastFilter;
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
@@ -37,7 +38,8 @@ public class WeaponBase : MonoBehaviour
         ammo = ammo - 1;
         nextShot = Time.time + timeBetweenShots;
 
-        Debug.DrawRay( shootPoint.position, shootPoint.TransformDirection( Vector2.right ) * 25, Color.red, 1f );
+        RaycastHit2D shotRay = Physics2D.Raycast( shootPoint.position, shootPoint.TransformDirection( Vector2.right ), 100, raycastFilter );
+        Debug.Log( shotRay.transform );
     }
 
     public virtual void Reload()
@@ -54,6 +56,7 @@ public class WeaponBase : MonoBehaviour
 
         isReloading = false;
         ammo = clipSize;
+        CancelInvoke();
     }
 
     public void HandleControls()

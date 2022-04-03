@@ -535,7 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1435037079}
   - component: {fileID: 1435037080}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1729102391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 1767732474}
   - component: {fileID: 1767732475}
   - component: {fileID: 1767732476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,6 +876,9 @@ MonoBehaviour:
   shootPoint: {fileID: 1435037079}
   shootPointCollider: {fileID: 1435037080}
   crosshairHandler: {fileID: 841494918}
+  raycastFilter:
+    serializedVersion: 2
+    m_Bits: 55
   clipSize: 10
   timeBetweenShots: 0.35
   reloadTime: 1.25
@@ -992,6 +995,10 @@ PrefabInstance:
     - target: {fileID: 6257020690690418188, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257020690690418188, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6257020690690418188, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: m_TagString
