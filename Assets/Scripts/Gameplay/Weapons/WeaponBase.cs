@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class WeaponBase : MonoBehaviour
 {
+    // Configurable Fields
     public Camera playerCam;
     public Transform playerTransform;
     public Transform weaponPivot;
     public Transform shootPoint;
     public float weaponOffset = 5f;
     public int clipSize = 10;
+    public float timeBetweenShots = 0.35f;
+    public float reloadTime = 1.25f;
 
-    private int ammo = 0;
+    // Internal Fields
+    public bool isReloading = false;
+    public int ammo = 0;
+    public float nextShot = 0f;
 
     private void Start()
     {
@@ -20,13 +26,27 @@ public class WeaponBase : MonoBehaviour
 
     public virtual void Shoot()
     {
-        if( ammo <= 0 ) return;
+        if( isReloading || ammo <= 0 || Time.time < nextShot ) return;
+
         ammo = ammo - 1;
+        nextShot = Time.time + timeBetweenShots;
+
         Debug.DrawRay( shootPoint.position, shootPoint.TransformDirection( Vector2.right ) * 25, Color.red, 1f );
     }
 
     public virtual void Reload()
     {
+        if( isReloading ) return;
+
+        isReloading = true;
+        Invoke( nameof( FinishReload ), reloadTime );
+    }
+
+    public virtual void FinishReload()
+    {
+        if( !isReloading ) return;
+
+        isReloading = false;
         ammo = clipSize;
     }
 
