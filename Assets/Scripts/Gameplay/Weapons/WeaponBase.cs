@@ -10,6 +10,7 @@ public class WeaponBase : MonoBehaviour
     public Transform weaponPivot;
     public Transform shootPoint;
     public Collider2D shootPointCollider;
+    public CrosshairHandler crosshairHandler;
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
@@ -24,9 +25,14 @@ public class WeaponBase : MonoBehaviour
         ammo = clipSize;
     }
 
+    public virtual bool CanShoot()
+    {
+        return !isReloading && ammo > 0 && Time.time >= nextShot && !shootPointCollider.IsTouchingLayers();
+    }
+
     public virtual void Shoot()
     {
-        if( isReloading || ammo <= 0 || Time.time < nextShot || shootPointCollider.IsTouchingLayers() ) return;
+        if( !CanShoot() ) return;
 
         ammo = ammo - 1;
         nextShot = Time.time + timeBetweenShots;
@@ -67,8 +73,14 @@ public class WeaponBase : MonoBehaviour
         transform.localRotation = weaponRotation;
     }
 
+    public void HandleWeaponCrosshair()
+    {
+        crosshairHandler.SetCrosshairEnabled( CanShoot() );
+    }
+
     private void Update()
     {
+        HandleWeaponCrosshair();
         HandleControls();
         HandleRotation();
     }
