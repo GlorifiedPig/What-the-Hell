@@ -10,7 +10,6 @@ public class WeaponBase : MonoBehaviour
     public Transform weaponPivot;
     public Transform shootPoint;
     public Collider2D shootPointCollider;
-    public float weaponOffsetZ = 5f;
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
@@ -61,15 +60,11 @@ public class WeaponBase : MonoBehaviour
     {
         Vector3 difference = playerCam.ScreenToWorldPoint( Input.mousePosition ) - weaponPivot.position;
         float rotationZ = Mathf.Atan2( difference.y, difference.x ) * Mathf.Rad2Deg;
-        weaponPivot.rotation = Quaternion.Euler( 0f, 0f, rotationZ + weaponOffsetZ );
+        weaponPivot.rotation = Quaternion.Euler( 0f, 0f, rotationZ );
 
         Quaternion weaponRotation = transform.localRotation;
         weaponRotation.x = Mathf.Abs( rotationZ ) >= 90 ? 180 : 0;
         transform.localRotation = weaponRotation;
-
-        Vector3 weaponPosition = transform.localPosition;
-        weaponPosition.y = Mathf.Abs( rotationZ ) >= 90 ? shootPoint.localPosition.y * 2 : 0;
-        transform.localPosition = weaponPosition;
     }
 
     private void Update()
