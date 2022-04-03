@@ -11,7 +11,6 @@ public class WeaponBase : MonoBehaviour
     public Transform shootPoint;
     public Collider2D shootPointCollider;
     public float weaponOffsetZ = 5f;
-    public float facingLeftOffsetX = 1.5f;
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
@@ -69,7 +68,7 @@ public class WeaponBase : MonoBehaviour
         transform.localRotation = weaponRotation;
 
         Vector3 weaponPosition = transform.localPosition;
-        weaponPosition.y = Mathf.Abs( rotationZ ) >= 90 ? facingLeftOffsetX : 0;
+        weaponPosition.y = Mathf.Abs( rotationZ ) >= 90 ? shootPoint.localPosition.y * 2 : 0;
         transform.localPosition = weaponPosition;
     }
 
