@@ -231,7 +231,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   player: {fileID: 1538982536}
   smoothingSpeed: 0.2
-  maxDistance: 15
+  maxDistance: 10
   offsetZ: -10
 --- !u!20 &519420031
 Camera:
@@ -260,7 +260,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -394,7 +394,7 @@ Transform:
   m_GameObject: {fileID: 1278553771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1213192240}
   m_RootOrder: 0
@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ca68973a140da4a9b73a4d109d0d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 17
+  movementSpeed: 15
   movementSmoothing: 0.12
   rigidbody2d: {fileID: 1538982533}
 --- !u!70 &1538982535
