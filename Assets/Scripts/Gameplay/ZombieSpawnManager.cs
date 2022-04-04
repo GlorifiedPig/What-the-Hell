@@ -16,7 +16,7 @@ public class ZombieSpawnManager : MonoBehaviour
     public void SpawnZombie()
     {
         GameObject zombiePrefab = zombies[Random.Range( 0, zombies.Length )];
-        Vector3 spawnPos = spawners[Random.Range( 0, zombies.Length )].position;
+        Vector3 spawnPos = spawners[Random.Range( 0, spawners.Length )].position;
         spawnPos.z = zombiePrefab.transform.position.z;
         Instantiate( zombiePrefab, spawnPos, Quaternion.identity );
     }
