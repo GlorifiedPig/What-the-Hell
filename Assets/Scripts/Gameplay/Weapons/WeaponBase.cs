@@ -72,7 +72,9 @@ public class WeaponBase : MonoBehaviour
                 audioSource.PlayOneShot( impactSoundsObjects[Random.Range( 0, impactSoundsObjects.Length )], 0.4f );
             }
 
-            BulletHit.Invoke( shotRay, Random.Range( minDamage, maxDamage ) );
+            float damage = Random.Range( minDamage, maxDamage );
+            if( PowerupManager.activePowerup == PowerupManager.ActivePowerup.DoubleDamage ) damage = damage * 2;
+            BulletHit.Invoke( shotRay, damage );
 
             StartCoroutine( SpawnTracer( shotRay ) );
 

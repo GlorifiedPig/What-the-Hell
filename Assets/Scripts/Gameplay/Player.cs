@@ -70,4 +70,5 @@ public class Player : MonoBehaviour
     }
 
     public void AddHealth( float addedHealth ) => health += Mathf.Min( addedHealth, maxHealth );
+    public void AddArmor( float addedArmor ) => armor += Mathf.Min( addedArmor, maxArmor );
 }

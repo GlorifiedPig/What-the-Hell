@@ -3123,7 +3123,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ea103582432884c88f1ae1060d8885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1791109706}
   audioSource: {fileID: 1032987833}
+  powerupChance: 0.1
+  healthPowerup: {fileID: 2118682511808524227, guid: a36826ff7b13b3b439435dc1006ad19e,
+    type: 3}
+  armorPowerup: {fileID: 2118682511808524227, guid: bfb9dfce6f813d344a1a901c84f1cae4,
+    type: 3}
+  doubleDamagePowerup: {fileID: 2118682511808524227, guid: 69539f4e32df2064385f21512a25fd7c,
+    type: 3}
+  speedPowerup: {fileID: 2118682511808524227, guid: 2f211060b74df3a4fb082083b61acd91,
+    type: 3}
 --- !u!1 &1100609472
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,6 +4907,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1791109706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6257020690061599880}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5c27eeab2155b41ae57514d2aabbfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1791109711 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6257020690690418189, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,

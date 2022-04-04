@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidbody2d.MovePosition( rigidbody2d.position + ( cachedMovement * movementSpeed * Time.fixedDeltaTime ) );
+        float speedModified = movementSpeed;
+        if( PowerupManager.activePowerup == PowerupManager.ActivePowerup.Speed ) speedModified = speedModified * 1.4f;
+        rigidbody2d.MovePosition( rigidbody2d.position + ( cachedMovement * speedModified * Time.fixedDeltaTime ) );
     }
 }
