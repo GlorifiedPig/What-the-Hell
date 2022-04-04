@@ -286,7 +286,7 @@ MonoBehaviour:
   healthDisplay: {fileID: 6070754783545062807}
   canvas: {fileID: 6070754784256460024}
   healthImage: {fileID: 6070754784571327014}
-  attackDistance: 2.5
+  attackDistance: 5
   timeBetweenAttacks: 1
   damageToPlayer: 34
   healthPerRound: 100

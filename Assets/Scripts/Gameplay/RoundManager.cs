@@ -1,10 +1,10 @@
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RoundManager : MonoBehaviour
 {
+    public AudioSource gameAudioSource;
+    public AudioClip gameStartSound;
     public int round = 0;
     public int maxEnemiesAlive = 24;
     public float spawnTimer = 5f;
@@ -28,6 +28,7 @@ public class RoundManager : MonoBehaviour
     public void StartRound()
     {
         round = round + 1;
+        if( round == 1 ) gameAudioSource.PlayOneShot( gameStartSound );
         roundEnd = false;
         enemiesSpawned = 0;
         totalEnemiesThisRound = Mathf.RoundToInt( (float)( 0.000058 * Mathf.Pow( round, 3 ) + 0.074032 * Mathf.Pow( round, 2 ) + 0.718119 * round + 14.738699 ) );

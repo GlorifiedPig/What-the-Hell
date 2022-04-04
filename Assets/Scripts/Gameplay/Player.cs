@@ -21,7 +21,10 @@ public class Player : MonoBehaviour
     public float maxArmor = 100f;
     public static bool alive = true;
 
+    public static Player Instance;
     public static event Action PlayerDeath;
+
+    public void OnEnable() => Instance = this;
 
     public void Start()
     {
@@ -65,4 +68,6 @@ public class Player : MonoBehaviour
 
         audioSource.PlayOneShot( damagedAudio[Random.Range( 0, damagedAudio.Length )] );
     }
+
+    public void AddHealth( float addedHealth ) => health += Mathf.Min( addedHealth, maxHealth );
 }

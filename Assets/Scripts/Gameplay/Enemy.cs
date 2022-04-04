@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     public GameObject healthDisplay;
     public Transform canvas;
     public Image healthImage;
-    public float attackDistance = 2.5f;
+    public float attackDistance = 5f;
     public float timeBetweenAttacks = 1f;
     public float damageToPlayer = 34f;
     public float healthPerRound = 100f;
@@ -51,9 +51,9 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        playerObject = GameObject.FindGameObjectWithTag( playerTag );
+        player = Player.Instance;
+        playerObject = player.gameObject;
         if( Player.alive ) aiDestinationSetter.target = playerObject.transform;
-        player = playerObject.GetComponent<Player>();
         aiPath.maxSpeed = Random.Range( minSpeed, maxSpeed );
     }
 
