@@ -56,7 +56,7 @@ public class WeaponBase : MonoBehaviour
             ammo = ammo - 1;
             nextShot = Time.time + timeBetweenShots;
 
-            audioSource.PlayOneShot( gunshotSounds[Random.Range( 0, gunshotSounds.Length - 1 )] );
+            audioSource.PlayOneShot( gunshotSounds[Random.Range( 0, gunshotSounds.Length )] );
         
             Vector3 instantiatePos = shotRay.point;
             instantiatePos.z = -9f; // We want the particles to always be in front.
@@ -64,11 +64,11 @@ public class WeaponBase : MonoBehaviour
             if( shotRay.transform.tag == enemyTag )
             {
                 Instantiate( bloodImpactParticles, instantiatePos, bloodImpactParticles.rotation );
-                audioSource.PlayOneShot( impactSoundsFlesh[Random.Range( 0, impactSoundsFlesh.Length - 1 )], 0.4f );
+                audioSource.PlayOneShot( impactSoundsFlesh[Random.Range( 0, impactSoundsFlesh.Length )], 0.4f );
             } else
             {
                 Instantiate( objectImpactParticles, instantiatePos, objectImpactParticles.rotation );
-                audioSource.PlayOneShot( impactSoundsObjects[Random.Range( 0, impactSoundsObjects.Length - 1 )], 0.4f );
+                audioSource.PlayOneShot( impactSoundsObjects[Random.Range( 0, impactSoundsObjects.Length )], 0.4f );
             }
 
             BulletHit.Invoke( shotRay, Random.Range( minDamage, maxDamage ) );

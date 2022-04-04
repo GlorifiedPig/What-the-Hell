@@ -17,7 +17,7 @@ public class MusicManager : MonoBehaviour
 
     void PlayAppropriateMusic()
     {
-        StartCoroutine( SwitchMusic( music[Random.Range( 0, music.Length - 1 )] ) );
+        StartCoroutine( SwitchMusic( music[Random.Range( 0, music.Length )] ) );
     }
 
     void Update()
