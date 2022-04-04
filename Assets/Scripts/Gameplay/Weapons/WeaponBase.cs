@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class WeaponBase : MonoBehaviour
@@ -12,12 +14,14 @@ public class WeaponBase : MonoBehaviour
     public LayerMask raycastFilter;
     public Transform objectImpactParticles;
     public Transform bloodImpactParticles;
+    public TrailRenderer tracer;
     public string enemyTag = "Enemy";
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
 
     // Internal Fields
+    public static event Action<RaycastHit2D> BulletHit = ( raycastHit2D ) => { }; 
     public bool isReloading = false;
     public int ammo = 0;
     public float nextShot = 0f;
@@ -46,14 +50,30 @@ public class WeaponBase : MonoBehaviour
             Vector3 instantiatePos = shotRay.point;
             instantiatePos.z = -9f; // We want the particles to always be in front.
 
-            if( shotRay.transform.tag == enemyTag )
-            {
-                Instantiate( bloodImpactParticles, instantiatePos, bloodImpactParticles.rotation );
-            } else
-            {
-                Instantiate( objectImpactParticles, instantiatePos, objectImpactParticles.rotation );
-            }
+            if( shotRay.transform.tag == enemyTag ) Instantiate( bloodImpactParticles, instantiatePos, bloodImpactParticles.rotation );
+            else Instantiate( objectImpactParticles, instantiatePos, objectImpactParticles.rotation );
+
+            BulletHit.Invoke( shotRay );
+
+            StartCoroutine( SpawnTracer( shotRay ) );
         }
+    }
+
+    public IEnumerator SpawnTracer( RaycastHit2D hit )
+    {
+        float time = 0f;
+        Vector3 startPosition = shootPoint.position;
+        TrailRenderer trail = Instantiate( tracer, startPosition, Quaternion.identity );
+
+        while( time < tracer.time )
+        {
+            trail.transform.position = Vector3.Lerp( startPosition, hit.point, time );
+            time += Time.deltaTime / trail.time;
+            yield return null;
+        }
+
+        trail.transform.position = hit.point;
+        Destroy( trail.gameObject, trail.time );
     }
 
     public virtual void Reload()

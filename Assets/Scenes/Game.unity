@@ -3629,6 +3629,7 @@ MonoBehaviour:
     type: 3}
   bloodImpactParticles: {fileID: 7695387501572038028, guid: 5b5da9f13c1ee8c4181fc383ee833cde,
     type: 3}
+  tracer: {fileID: 1320442777640840982, guid: d8afb18c9f18f5e45a95e0fe842d9916, type: 3}
   enemyTag: Enemy
   clipSize: 12
   timeBetweenShots: 0.25
