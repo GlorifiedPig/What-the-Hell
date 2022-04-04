@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 50575779}
   - component: {fileID: 50575781}
   - component: {fileID: 50575780}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 105573316}
   - component: {fileID: 105573318}
   - component: {fileID: 105573317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 249056182}
   - component: {fileID: 249056184}
   - component: {fileID: 249056183}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: L House Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 319565051}
   - component: {fileID: 319565053}
   - component: {fileID: 319565052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Outer Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -777,7 +777,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &545632525
 GameObject:
@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 545632526}
   - component: {fileID: 545632528}
   - component: {fileID: 545632527}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: L House Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 647167537}
   - component: {fileID: 647167539}
   - component: {fileID: 647167538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: L House Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1010,7 +1010,7 @@ GameObject:
   - component: {fileID: 685678480}
   - component: {fileID: 685678482}
   - component: {fileID: 685678481}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: House Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 730644096}
   - component: {fileID: 730644098}
   - component: {fileID: 730644097}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1230,7 +1230,7 @@ GameObject:
   - component: {fileID: 742111602}
   - component: {fileID: 742111604}
   - component: {fileID: 742111603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Outer Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1358,7 +1358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &841494918
 MonoBehaviour:
@@ -1388,7 +1388,7 @@ GameObject:
   - component: {fileID: 981054272}
   - component: {fileID: 981054274}
   - component: {fileID: 981054273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: House Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,7 +1498,7 @@ GameObject:
   - component: {fileID: 984182740}
   - component: {fileID: 984182742}
   - component: {fileID: 984182741}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pool Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 1180252540}
   - component: {fileID: 1180252542}
   - component: {fileID: 1180252541}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Outer Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1737,7 +1737,7 @@ Transform:
   - {fileID: 1278553772}
   - {fileID: 248348944}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1278553771
 GameObject:
@@ -1832,7 +1832,7 @@ GameObject:
   - component: {fileID: 1305832773}
   - component: {fileID: 1305832775}
   - component: {fileID: 1305832774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: House Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2017,7 +2017,7 @@ GameObject:
   - component: {fileID: 1375534006}
   - component: {fileID: 1375534008}
   - component: {fileID: 1375534007}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: House Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2127,7 +2127,7 @@ GameObject:
   - component: {fileID: 1399188176}
   - component: {fileID: 1399188178}
   - component: {fileID: 1399188177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: L House Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2238,7 +2238,7 @@ GameObject:
   - component: {fileID: 1410738077}
   - component: {fileID: 1410738079}
   - component: {fileID: 1410738078}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2347,7 +2347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1435037079}
   - component: {fileID: 1435037080}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2394,6 +2394,192 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.2}
   m_EdgeRadius: 0
+--- !u!1 &1439773783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1439773785}
+  - component: {fileID: 1439773784}
+  - component: {fileID: 1439773789}
+  - component: {fileID: 1439773787}
+  - component: {fileID: 1439773786}
+  - component: {fileID: 1439773788}
+  m_Layer: 0
+  m_Name: Zombie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1439773784
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439773783}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2ef5bcd88c0859c439be6ff880ef5458, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1439773785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439773783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26, y: -9.75, z: -8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1439773786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439773783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+  radius: 1.5
+  height: 2
+  canMove: 1
+  maxSpeed: 5
+  gravity: {x: 0, y: 0, z: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  repathRateCompatibility: NaN
+  canSearchCompability: 0
+  orientation: 1
+  enableRotation: 0
+  autoRepath:
+    mode: 2
+    interval: 0.5
+    sensitivity: 10
+    maximumInterval: 2
+    visualizeSensitivity: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 1
+  constrainInsideGraph: 0
+--- !u!114 &1439773787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439773783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &1439773788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439773783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 1538982536}
+--- !u!70 &1439773789
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439773783}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.56, y: 5.72}
+  m_Direction: 0
 --- !u!1 &1507946925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,7 +2591,7 @@ GameObject:
   - component: {fileID: 1507946926}
   - component: {fileID: 1507946928}
   - component: {fileID: 1507946927}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: L House Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2580,7 +2766,7 @@ GameObject:
   - component: {fileID: 1553677656}
   - component: {fileID: 1553677658}
   - component: {fileID: 1553677657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fence Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2679,6 +2865,92 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1708077729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708077730}
+  - component: {fileID: 1708077731}
+  m_Layer: 0
+  m_Name: Pathfinding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1708077730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708077729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1708077731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708077729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAAAQIexyAO8McwIAACsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWxDZjQWwuE9EDChHZy8UXIa6xBljySHCAZ/nu1so0dcmJ5bz/efsifhEtTArNKrzVPNyoF8nNA0CY/Bh35BGd6UHLHP6D1eeOpzdGJep9XarlyeIhhRhVgNWe/5EGgc+DASvJM6WKVHmChjDUOzqgw4CitLEZLB30OyNn9DOcYcnFWNEPrw1nzYHB1JgNpQXeuN8dROJnO4lkUroZB3MSEo3g8G08fomg1DCMfX0kmaFFCis10acLppEn0EHs/6fpsXLAnpoTgphFJ7KX0Q9iVOWjAKaScup69MHTPgR9yi7L6sS9ZZsA2ojW9LLl2o6uTkt+qnmdBzbHW9U5FhWXiiVdU59x8o4ehpzOtiqe2bBhgCZtzdnylF0aN7c27Dy+/6q7kiYoj3Qt4y0E+q7VWlUwdaXWFoZWBaNn9vXW2yIEdO7yWegdW5fettcvFHq6++fNC8GKP1GhSAzuh/LT9TYB2e/njBPuLMU0Kh6KKfwb+0kP/tBrikWtjHdV0KVHeXlUaXcnKzwy7qexCaQkebkSXIKmwl61LY+83eMf1yt4xjxQfUVO84dq3cRfi4c4/CO6orTrdlmVyddqAyV8qK7iETjQSz25OCyVlfWD9mbRhu0pnlPXCDhVPv54WCcbTLKDxbBKwMIMoHtIHNs6yYB/OpnQyhznxt8el65OKbS20GY/bmuySS3dn7bdlsNa09Meeanpa849C9UbOZaZ2TAPIlzrDTThoV8S9yXSVcjegHVjLpd83+UyIUOwIaXJLlPhOV2eradJlSUjJ35VFJCEL/zFJCMK3W95qeOdwwuJtsiu5/gdQSwMEFAAACAgAABAh7C3ZVKNtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKBsWmaQaKZuYlBsmFaqpGZbqJFsnFamkGSoblpoollqqVSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAABAh7HIA7wxzAgAAKwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAABAh7C3ZVKNtAAAAeAAAAAkAJAAAAAAAAAAAAAAAwAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 0
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
 --- !u!1 &1724867403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,7 +2962,7 @@ GameObject:
   - component: {fileID: 1724867404}
   - component: {fileID: 1724867406}
   - component: {fileID: 1724867405}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Outer Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2798,7 +3070,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1729102391}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2831,7 +3103,7 @@ GameObject:
   - component: {fileID: 1767732474}
   - component: {fileID: 1767732475}
   - component: {fileID: 1767732476}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2944,7 +3216,7 @@ GameObject:
   - component: {fileID: 1854625629}
   - component: {fileID: 1854625631}
   - component: {fileID: 1854625630}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: House Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3054,7 +3326,7 @@ GameObject:
   - component: {fileID: 1860613203}
   - component: {fileID: 1860613205}
   - component: {fileID: 1860613204}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: House Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3164,7 +3436,7 @@ GameObject:
   - component: {fileID: 2062723974}
   - component: {fileID: 2062723976}
   - component: {fileID: 2062723975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: L House Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3357,7 +3629,7 @@ RectTransform:
   m_Children:
   - {fileID: 1368102908}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3379,7 +3651,7 @@ PrefabInstance:
     - target: {fileID: 6257020690690418188, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6257020690690418188, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,
         type: 3}
@@ -3389,7 +3661,7 @@ PrefabInstance:
     - target: {fileID: 6257020690690418190, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6257020690690418190, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,
         type: 3}
