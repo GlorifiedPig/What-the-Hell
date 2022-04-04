@@ -5077,6 +5077,9 @@ MonoBehaviour:
   raycastFilter:
     serializedVersion: 2
     m_Bits: 320
+  preventShootingLayers:
+    serializedVersion: 2
+    m_Bits: 64
   objectImpactParticles: {fileID: 4021012967328986432, guid: e0f682e01c6ba094da8080a6c8416801,
     type: 3}
   bloodImpactParticles: {fileID: 7695387501572038028, guid: 5b5da9f13c1ee8c4181fc383ee833cde,

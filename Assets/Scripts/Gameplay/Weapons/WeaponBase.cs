@@ -14,6 +14,7 @@ public class WeaponBase : MonoBehaviour
     public Collider2D shootPointCollider;
     public CrosshairHandler crosshairHandler;
     public LayerMask raycastFilter;
+    public LayerMask preventShootingLayers;
     public Transform objectImpactParticles;
     public Transform bloodImpactParticles;
     public TrailRenderer tracer;
@@ -42,7 +43,7 @@ public class WeaponBase : MonoBehaviour
 
     public virtual bool CanShoot()
     {
-        return !isReloading && ammo > 0 && Time.time >= nextShot && !shootPointCollider.IsTouchingLayers();
+        return !isReloading && ammo > 0 && Time.time >= nextShot && !shootPointCollider.IsTouchingLayers( preventShootingLayers );
     }
 
     public virtual void Shoot()
