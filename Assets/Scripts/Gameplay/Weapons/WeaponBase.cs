@@ -81,6 +81,7 @@ public class WeaponBase : MonoBehaviour
     {
         float time = 0f;
         Vector3 startPosition = shootPoint.position;
+        startPosition.z -= 10f;
         TrailRenderer trail = Instantiate( tracer, startPosition, Quaternion.identity );
 
         while( time < tracer.time )

@@ -721,7 +721,7 @@ MonoBehaviour:
   player: {fileID: 1538982536}
   smoothingSpeed: 0.2
   maxDistance: 10
-  offsetZ: -10
+  offsetZ: -100
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: -4.75, z: -10}
+  m_LocalPosition: {x: 8, y: -4.75, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2622,6 +2622,7 @@ MonoBehaviour:
   healthImage: {fileID: 1880378662}
   maxHealth: 100
   health: 100
+  decayDelay: 5
   alive: 1
   aiPath: {fileID: 1439773786}
 --- !u!50 &1439773791
@@ -4219,7 +4220,7 @@ PrefabInstance:
     - target: {fileID: 6257020690690418190, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6257020690690418190, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,
         type: 3}
