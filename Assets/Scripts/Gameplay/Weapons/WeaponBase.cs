@@ -39,12 +39,9 @@ public class WeaponBase : MonoBehaviour
 
         RaycastHit2D shotRay = Physics2D.Raycast( shootPoint.position, shootPoint.TransformDirection( Vector2.right ), 100, raycastFilter );
 
-        if(shotRay.transform)
+        if( shotRay.transform )
         {
-            Vector3 shootPos = shootPoint.position;
-            Vector3 hitPoint = shotRay.point;
-            float angle = ( Mathf.Atan2( shootPos.y - hitPoint.y, shootPos.x - hitPoint.x ) * Mathf.Rad2Deg ) - 90f;
-            Instantiate( objectImpactParticles, hitPoint, Quaternion.Euler( 0f, 0f, angle ) ); ;
+            Instantiate( objectImpactParticles, shotRay.point, objectImpactParticles.rotation );
         }
     }
 
