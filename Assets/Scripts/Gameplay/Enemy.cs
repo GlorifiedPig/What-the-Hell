@@ -6,6 +6,7 @@ using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
+    public string playerTag = "Player";
     public Collider2D enemyCollider;
     public SpriteRenderer spriteRenderer;
     public Sprite deadSprite;
@@ -17,6 +18,7 @@ public class Enemy : MonoBehaviour
     public float decayDelay = 5f;
     public bool alive = true;
     public AIPath aiPath;
+    public AIDestinationSetter aiDestinationSetter;
 
     private bool startedDecaying = false;
     private float deathFading = 1f;
@@ -27,6 +29,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         health = maxHealth;
+        aiDestinationSetter.target = GameObject.FindGameObjectWithTag( playerTag ).transform;
     }
 
     private void Update()
@@ -75,6 +78,10 @@ public class Enemy : MonoBehaviour
         healthDisplay.SetActive( false );
         enemyCollider.enabled = false;
         Invoke( nameof( BeginDecay ), decayDelay );
+
+        Vector3 newPosition = transform.position;
+        newPosition.z += 1; // Let's get out of the way of the other zombies.
+        transform.position = newPosition;
     }
 
     private void BulletHit( RaycastHit2D ray, float damage )
