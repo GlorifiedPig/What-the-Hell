@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public bool alive = true;
     public AIPath aiPath;
 
+    private float deathFading = 1f;
+
     private void OnEnable() => WeaponBase.BulletHit += BulletHit;
     private void OnDisable() => WeaponBase.BulletHit -= BulletHit;
 
@@ -28,6 +30,15 @@ public class Enemy : MonoBehaviour
         healthImage.fillAmount = Mathf.Lerp( healthImage.fillAmount, health / maxHealth, Time.deltaTime * 5f );
         if( aiPath.desiredVelocity.x >= 0.01f ) transform.localScale = new Vector3( -1f, 1f, 1f );
         else transform.localScale = new Vector3( 1f, 1f, 1f );
+
+        if( !alive )
+        {
+            deathFading -= Time.deltaTime / 10f;
+            if( deathFading <= 0 ) { Destroy( gameObject ); return; }
+            Color newColor = spriteRenderer.color;
+            newColor.a = deathFading;
+            spriteRenderer.color = newColor;
+        }
     }
 
     public void TakeDamage( float damage )

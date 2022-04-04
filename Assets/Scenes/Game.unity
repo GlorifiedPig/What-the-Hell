@@ -2623,6 +2623,7 @@ MonoBehaviour:
   health: 100
   alive: 1
   aiPath: {fileID: 1439773786}
+  fadeMultiplier: -5
 --- !u!50 &1439773791
 Rigidbody2D:
   serializedVersion: 4
