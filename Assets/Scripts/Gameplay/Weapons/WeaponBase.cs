@@ -144,10 +144,4 @@ public class WeaponBase : MonoBehaviour
         HandleControls();
         HandleRotation();
     }
-
-    // Debug IMGUI to display weapon statistics.
-    private void OnGUI()
-    {
-        GUILayout.Label( "Ammo: " + ammo + "/" + clipSize );
-    }
 }

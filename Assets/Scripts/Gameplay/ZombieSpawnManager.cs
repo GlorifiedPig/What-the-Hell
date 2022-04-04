@@ -6,12 +6,6 @@ public class ZombieSpawnManager : MonoBehaviour
 {
     public Transform[] spawners;
     public GameObject[] zombies;
-    public float spawnTime = 5f;
-
-    public void Start()
-    {
-        InvokeRepeating( nameof( SpawnZombie ), spawnTime, spawnTime );
-    }
 
     public GameObject SpawnZombie()
     {

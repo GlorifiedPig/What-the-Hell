@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Pathfinding;
+using System;
 
 public class Enemy : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class Enemy : MonoBehaviour
 
     private bool startedDecaying = false;
     private float deathFading = 1f;
+
+    public static event Action<Enemy> EnemyDeath = ( enemy ) => { };
 
     private void OnEnable() => WeaponBase.BulletHit += BulletHit;
     private void OnDisable() => WeaponBase.BulletHit -= BulletHit;
@@ -82,6 +85,8 @@ public class Enemy : MonoBehaviour
         Vector3 newPosition = transform.position;
         newPosition.z += 1; // Let's get out of the way of the other zombies.
         transform.position = newPosition;
+
+        EnemyDeath.Invoke( this );
     }
 
     private void BulletHit( RaycastHit2D ray, float damage )

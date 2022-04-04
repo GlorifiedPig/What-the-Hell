@@ -2489,6 +2489,8 @@ GameObject:
   - component: {fileID: 841494917}
   - component: {fileID: 841494918}
   - component: {fileID: 841494919}
+  - component: {fileID: 841494920}
+  - component: {fileID: 841494921}
   m_Layer: 0
   m_Name: GameManagers
   m_TagString: Untagged
@@ -2546,7 +2548,37 @@ MonoBehaviour:
   - {fileID: 443450348}
   zombies:
   - {fileID: 6070754783971900247, guid: 2db841f76ac2ddc4fa9cd74cb5ebe3ab, type: 3}
-  spawnTime: 3
+--- !u!114 &841494920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841494916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9bb6f30b79011f4f867c3be72486f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  round: 0
+  maxEnemies: 15
+  spawnTimer: 5
+  timeBetweenRounds: 8
+  zombieSpawnManager: {fileID: 841494919}
+--- !u!114 &841494921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841494916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146539456d795e5499a04d85d29d38aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roundManager: {fileID: 841494920}
+  weapon: {fileID: 1896309307}
 --- !u!1 &883954762
 GameObject:
   m_ObjectHideFlags: 0
