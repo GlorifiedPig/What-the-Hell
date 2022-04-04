@@ -5088,7 +5088,7 @@ MonoBehaviour:
   enemyTag: Enemy
   clipSize: 12
   timeBetweenShots: 0.25
-  reloadTime: 1
+  reloadTime: 1.5
   minDamage: 25
   maxDamage: 50
   audioSource: {fileID: 1896309308}
