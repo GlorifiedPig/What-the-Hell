@@ -49,7 +49,8 @@ public class RoundManager : MonoBehaviour
     {
         enemiesSpawned += 1;
         aliveEnemies += 1;
-        zombieSpawnManager.SpawnZombie();
+        Enemy enemy = zombieSpawnManager.SpawnZombie().GetComponent<Enemy>();
+        enemy.SetHealth( enemy.baseHealth + ( ( round - 1 ) * enemy.healthPerRound ) );
     }
 
     public void EnemyDeath( Enemy enemy )

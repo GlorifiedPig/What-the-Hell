@@ -14,13 +14,15 @@ public class Enemy : MonoBehaviour
     public GameObject healthDisplay;
     public Transform canvas;
     public Image healthImage;
-    public float maxHealth = 100f;
-    public float health = 100f;
+    public float healthPerRound = 100f;
+    public float baseHealth = 150f;
     public float decayDelay = 5f;
     public bool alive = true;
     public AIPath aiPath;
     public AIDestinationSetter aiDestinationSetter;
 
+    public float maxHealth = 150f;
+    public float health = 150f;
     private bool startedDecaying = false;
     private float deathFading = 1f;
 
@@ -31,7 +33,6 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        health = maxHealth;
         aiDestinationSetter.target = GameObject.FindGameObjectWithTag( playerTag ).transform;
     }
 
@@ -93,5 +94,11 @@ public class Enemy : MonoBehaviour
     {
         if( alive && ray.transform == this.transform )
             TakeDamage( damage );
+    }
+
+    public void SetHealth( float newHealth )
+    {
+        maxHealth = newHealth;
+        health = newHealth;
     }
 }
