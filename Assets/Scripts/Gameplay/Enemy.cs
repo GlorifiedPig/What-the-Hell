@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite deadSprite;
     public GameObject healthDisplay;
+    public Transform canvas;
     public Image healthImage;
     public float maxHealth = 100f;
     public float health = 100f;
@@ -31,8 +32,15 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         healthImage.fillAmount = Mathf.Lerp( healthImage.fillAmount, health / maxHealth, Time.deltaTime * 5f );
-        if( aiPath.desiredVelocity.x >= 0.01f ) transform.localScale = new Vector3( -1f, 1f, 1f );
-        else transform.localScale = new Vector3( 1f, 1f, 1f );
+        if( aiPath.desiredVelocity.x >= 0.01f )
+        {
+            transform.localScale = new Vector3( -1f, 1f, 1f );
+            canvas.localScale = new Vector3( -1f, 1f, 1f );
+        } else
+        {
+            transform.localScale = new Vector3( 1f, 1f, 1f );
+            canvas.localScale = new Vector3( 1f, 1f, 1f );
+        }
 
         if( !alive && startedDecaying )
         {
