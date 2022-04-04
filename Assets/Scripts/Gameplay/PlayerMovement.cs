@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioClip[] footstepSounds;
+
     public float movementSpeed = 30f;
     public float movementSmoothing = 0.12f;
     public Rigidbody2D rigidbody2d;

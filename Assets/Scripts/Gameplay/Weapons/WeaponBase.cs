@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WeaponBase : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class WeaponBase : MonoBehaviour
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
+    public AudioSource audioSource;
+    public AudioClip[] gunshotSounds;
+    public AudioClip reloadSound;
+    public AudioClip[] impactSoundsObjects;
+    public AudioClip[] impactSoundsFlesh;
 
     // Internal Fields
     public static event Action<RaycastHit2D> BulletHit = ( raycastHit2D ) => { }; 
@@ -40,18 +46,27 @@ public class WeaponBase : MonoBehaviour
     {
         if( !CanShoot() ) return;
 
-        ammo = ammo - 1;
-        nextShot = Time.time + timeBetweenShots;
-
         RaycastHit2D shotRay = Physics2D.Raycast( shootPoint.position, shootPoint.TransformDirection( Vector2.right ), 100, raycastFilter );
 
         if( shotRay.transform )
         {
+            ammo = ammo - 1;
+            nextShot = Time.time + timeBetweenShots;
+
+            audioSource.PlayOneShot( gunshotSounds[Random.Range( 0, gunshotSounds.Length - 1 )] );
+        
             Vector3 instantiatePos = shotRay.point;
             instantiatePos.z = -9f; // We want the particles to always be in front.
 
-            if( shotRay.transform.tag == enemyTag ) Instantiate( bloodImpactParticles, instantiatePos, bloodImpactParticles.rotation );
-            else Instantiate( objectImpactParticles, instantiatePos, objectImpactParticles.rotation );
+            if( shotRay.transform.tag == enemyTag )
+            {
+                Instantiate( bloodImpactParticles, instantiatePos, bloodImpactParticles.rotation );
+                audioSource.PlayOneShot( impactSoundsFlesh[Random.Range( 0, impactSoundsFlesh.Length - 1 )], 0.5f );
+            } else
+            {
+                Instantiate( objectImpactParticles, instantiatePos, objectImpactParticles.rotation );
+                audioSource.PlayOneShot( impactSoundsObjects[Random.Range( 0, impactSoundsObjects.Length - 1 )], 0.5f );
+            }
 
             BulletHit.Invoke( shotRay );
 
@@ -80,6 +95,7 @@ public class WeaponBase : MonoBehaviour
     {
         if( isReloading ) return;
 
+        audioSource.PlayOneShot( reloadSound );
         isReloading = true;
         Invoke( nameof( FinishReload ), reloadTime );
     }

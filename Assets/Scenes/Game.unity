@@ -2765,6 +2765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ca68973a140da4a9b73a4d109d0d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  footstepSounds: []
   movementSpeed: 16
   movementSmoothing: 0.12
   rigidbody2d: {fileID: 1538982533}
@@ -3634,9 +3635,121 @@ MonoBehaviour:
   clipSize: 12
   timeBetweenShots: 0.25
   reloadTime: 1
+  audioSource: {fileID: 1896309308}
+  gunshotSounds:
+  - {fileID: 8300000, guid: 00962e7809f46f645807942af1cb1ee6, type: 3}
+  - {fileID: 8300000, guid: e701f99b66cb74b49af901fc3d27fb74, type: 3}
+  - {fileID: 8300000, guid: a87063811f2581e47af0cadc3cfafda9, type: 3}
+  reloadSound: {fileID: 8300000, guid: cc58b75170659804c9357e9b08bb89e9, type: 3}
+  impactSoundsObjects:
+  - {fileID: 8300000, guid: f37065e2640b49546b66fba2c86e55ee, type: 3}
+  - {fileID: 8300000, guid: 5c3a5f6d425304044be92b2ade599060, type: 3}
+  - {fileID: 8300000, guid: 1c17c4abda7a5214ab74845284481a63, type: 3}
+  impactSoundsFlesh:
+  - {fileID: 8300000, guid: 7700dece5ace380459e712d1f5e02fbd, type: 3}
+  - {fileID: 8300000, guid: ed1c3220d082d3c478995060908b0b17, type: 3}
+  - {fileID: 8300000, guid: e0e9b3bf76cbac24483eb13ad04a8502, type: 3}
+  - {fileID: 8300000, guid: 2473e17a5cb4a82448411834444cca21, type: 3}
+  - {fileID: 8300000, guid: e4a0b8ae0eb974840a6cecd86eb1c505, type: 3}
   isReloading: 0
   ammo: 0
   nextShot: 0
+--- !u!82 &1896309308
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896309306}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1968385486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3173896762685070746, guid: 36f6387fffc67514cbac69343acb6b14,
