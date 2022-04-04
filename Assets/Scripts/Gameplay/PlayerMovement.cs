@@ -13,6 +13,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if( !Player.alive )
+        {
+            isMoving = false;
+            return;
+        }
+
         Vector2 input = new Vector2( Input.GetAxisRaw( "Horizontal" ), Input.GetAxisRaw( "Vertical" ) );
         cachedMovement = Vector2.SmoothDamp( cachedMovement, input, ref movementVelocity, movementSmoothing );
 

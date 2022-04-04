@@ -4776,6 +4776,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &1791109711 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6257020690690418189, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6257020690061599880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1854625628
 GameObject:
   m_ObjectHideFlags: 0
@@ -5465,6 +5471,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6257020690061599882}
     - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 60b423b49718ccf44b2f31712a087e47,
+        type: 3}
+    - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: healthImage
       value: 
       objectReference: {fileID: 6257020690061599883}
@@ -5472,6 +5483,10 @@ PrefabInstance:
       propertyPath: armorDisplay
       value: 
       objectReference: {fileID: 6257020690061599881}
+    - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1791109711}
     - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: damagedAudio.Array.size
       value: 4

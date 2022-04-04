@@ -37,13 +37,22 @@ public class Enemy : MonoBehaviour
 
     public static event Action<Enemy> EnemyDeath = ( enemy ) => { };
 
-    private void OnEnable() => WeaponBase.BulletHit += BulletHit;
-    private void OnDisable() => WeaponBase.BulletHit -= BulletHit;
+    private void OnEnable()
+    {
+        Player.PlayerDeath += PlayerDeath;
+        WeaponBase.BulletHit += BulletHit;
+    }
+
+    private void OnDisable()
+    {
+        Player.PlayerDeath -= PlayerDeath;
+        WeaponBase.BulletHit -= BulletHit;
+    }
 
     private void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag( playerTag );
-        aiDestinationSetter.target = playerObject.transform;
+        if( Player.alive ) aiDestinationSetter.target = playerObject.transform;
         player = playerObject.GetComponent<Player>();
         aiPath.maxSpeed = Random.Range( minSpeed, maxSpeed );
     }
@@ -117,8 +126,13 @@ public class Enemy : MonoBehaviour
 
     public void AttackPlayer()
     {
-        if( Time.time < nextAttack ) return;
+        if( !alive || Time.time < nextAttack || !Player.alive ) return;
         player.TakeDamage( damageToPlayer );
         nextAttack = Time.time + timeBetweenAttacks;
+    }
+
+    public void PlayerDeath()
+    {
+        aiPath.maxSpeed = 0f;
     }
 }

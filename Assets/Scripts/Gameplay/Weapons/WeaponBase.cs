@@ -43,7 +43,7 @@ public class WeaponBase : MonoBehaviour
 
     public virtual bool CanShoot()
     {
-        return !isReloading && ammo > 0 && Time.time >= nextShot && !shootPointCollider.IsTouchingLayers( preventShootingLayers );
+        return !isReloading && ammo > 0 && Time.time >= nextShot && !shootPointCollider.IsTouchingLayers( preventShootingLayers ) && Player.alive;
     }
 
     public virtual void Shoot()
@@ -124,6 +124,8 @@ public class WeaponBase : MonoBehaviour
 
     public void HandleRotation()
     {
+        if( !Player.alive ) return;
+
         Vector3 difference = playerCam.ScreenToWorldPoint( Input.mousePosition ) - weaponPivot.position;
         float rotationZ = Mathf.Atan2( difference.y, difference.x ) * Mathf.Rad2Deg;
         weaponPivot.rotation = Quaternion.Euler( 0f, 0f, rotationZ );

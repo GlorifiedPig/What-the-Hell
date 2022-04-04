@@ -1,10 +1,15 @@
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
+    public Sprite deadSprite;
     public AudioClip[] damagedAudio;
     public AudioSource audioSource;
     public Image healthImage;
@@ -14,6 +19,9 @@ public class Player : MonoBehaviour
     public float health = 100f;
     public float armor = 0f;
     public float maxArmor = 100f;
+    public static bool alive = true;
+
+    public static event Action PlayerDeath;
 
     public void Start()
     {
@@ -29,7 +37,10 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-
+        if( !alive ) return;
+        alive = false;
+        spriteRenderer.sprite = deadSprite;
+        PlayerDeath.Invoke();
     }
 
     public void TakeDamage( float damage )

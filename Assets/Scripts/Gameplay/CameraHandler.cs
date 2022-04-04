@@ -15,6 +15,7 @@ public class CameraHandler : MonoBehaviour
 
     private void Update()
     {
+        if( !Player.alive ) return;
         Vector3 mousePos = cam.ScreenToWorldPoint( Input.mousePosition );
         Vector3 position = ( player.position + mousePos ) / 2f;
 

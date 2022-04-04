@@ -41,7 +41,7 @@ public class RoundManager : MonoBehaviour
 
     public void SpawnCheck()
     {
-        if( roundEnd || enemiesSpawned >= totalEnemiesThisRound || aliveEnemies >= maxEnemiesAlive ) return;
+        if( roundEnd || enemiesSpawned >= totalEnemiesThisRound || aliveEnemies >= maxEnemiesAlive || !Player.alive ) return;
         SpawnEnemy();
     }
 
