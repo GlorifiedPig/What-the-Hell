@@ -879,6 +879,7 @@ MonoBehaviour:
   raycastFilter:
     serializedVersion: 2
     m_Bits: 55
+  objectImpactParticles: {fileID: 1381544568698643513, guid: d2cc924c0d309f649a409e9dd825606f, type: 3}
   clipSize: 10
   timeBetweenShots: 0.35
   reloadTime: 1.25

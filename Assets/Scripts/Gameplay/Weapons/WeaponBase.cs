@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponBase : MonoBehaviour
@@ -12,6 +10,7 @@ public class WeaponBase : MonoBehaviour
     public Collider2D shootPointCollider;
     public CrosshairHandler crosshairHandler;
     public LayerMask raycastFilter;
+    public Transform objectImpactParticles;
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
@@ -39,7 +38,14 @@ public class WeaponBase : MonoBehaviour
         nextShot = Time.time + timeBetweenShots;
 
         RaycastHit2D shotRay = Physics2D.Raycast( shootPoint.position, shootPoint.TransformDirection( Vector2.right ), 100, raycastFilter );
-        Debug.Log( shotRay.transform );
+
+        if(shotRay.transform)
+        {
+            Vector3 shootPos = shootPoint.position;
+            Vector3 hitPoint = shotRay.point;
+            float angle = ( Mathf.Atan2( shootPos.y - hitPoint.y, shootPos.x - hitPoint.x ) * Mathf.Rad2Deg ) - 90f;
+            Instantiate( objectImpactParticles, hitPoint, Quaternion.Euler( 0f, 0f, angle ) ); ;
+        }
     }
 
     public virtual void Reload()
@@ -64,7 +70,7 @@ public class WeaponBase : MonoBehaviour
         if( Input.GetMouseButtonDown( 0 ) ) Shoot();
         if( Input.GetKeyDown( KeyCode.R ) ) Reload();
     }
-    
+
     public void HandleRotation()
     {
         Vector3 difference = playerCam.ScreenToWorldPoint( Input.mousePosition ) - weaponPivot.position;
