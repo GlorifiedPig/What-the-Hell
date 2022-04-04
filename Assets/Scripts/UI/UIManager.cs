@@ -11,6 +11,6 @@ public class UIManager : MonoBehaviour
     {
         GUILayout.Label( "Round: " + roundManager.round + " (Ended: " + roundManager.roundEnd + ")" );
         GUILayout.Label( "Ammo: " + weapon.ammo + "/" + weapon.clipSize );
-        GUILayout.Label( "Enemies Spawned: " + roundManager.enemiesSpawned + "/" + roundManager.totalEnemiesThisRound + " (Alive: " + roundManager.aliveEnemies + " / " + roundManager.maxEnemiesAlive + ")" );
+        GUILayout.Label( "Enemies Spawned: " + roundManager.enemiesSpawned + "/" + roundManager.totalEnemiesThisRound + " (Alive: " + roundManager.aliveEnemies + "/" + roundManager.maxEnemiesAlive + ")" );
     }
 }
