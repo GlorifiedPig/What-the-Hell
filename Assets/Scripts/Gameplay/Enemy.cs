@@ -6,6 +6,7 @@ using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
+    public Collider2D enemyCollider;
     public SpriteRenderer spriteRenderer;
     public Sprite deadSprite;
     public GameObject healthDisplay;
@@ -33,7 +34,7 @@ public class Enemy : MonoBehaviour
 
         if( !alive )
         {
-            deathFading -= Time.deltaTime / 10f;
+            deathFading -= Time.deltaTime / 8f;
             if( deathFading <= 0 ) { Destroy( gameObject ); return; }
             Color newColor = spriteRenderer.color;
             newColor.a = deathFading;
@@ -56,6 +57,7 @@ public class Enemy : MonoBehaviour
         spriteRenderer.sprite = deadSprite;
         transform.rotation = Quaternion.Euler( transform.rotation.x, transform.rotation.y, transform.rotation.z - 90f );
         healthDisplay.SetActive( false );
+        enemyCollider.enabled = false;
     }
 
     private void BulletHit( RaycastHit2D ray, float damage )
