@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections;
 using UnityEngine;
@@ -61,11 +62,11 @@ public class WeaponBase : MonoBehaviour
             if( shotRay.transform.tag == enemyTag )
             {
                 Instantiate( bloodImpactParticles, instantiatePos, bloodImpactParticles.rotation );
-                audioSource.PlayOneShot( impactSoundsFlesh[Random.Range( 0, impactSoundsFlesh.Length - 1 )], 0.5f );
+                audioSource.PlayOneShot( impactSoundsFlesh[Random.Range( 0, impactSoundsFlesh.Length - 1 )], 0.4f );
             } else
             {
                 Instantiate( objectImpactParticles, instantiatePos, objectImpactParticles.rotation );
-                audioSource.PlayOneShot( impactSoundsObjects[Random.Range( 0, impactSoundsObjects.Length - 1 )], 0.5f );
+                audioSource.PlayOneShot( impactSoundsObjects[Random.Range( 0, impactSoundsObjects.Length - 1 )], 0.4f );
             }
 
             BulletHit.Invoke( shotRay );
