@@ -11,6 +11,8 @@ public class WeaponBase : MonoBehaviour
     public CrosshairHandler crosshairHandler;
     public LayerMask raycastFilter;
     public Transform objectImpactParticles;
+    public Transform bloodImpactParticles;
+    public string enemyTag = "Enemy";
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
@@ -41,7 +43,13 @@ public class WeaponBase : MonoBehaviour
 
         if( shotRay.transform )
         {
-            Instantiate( objectImpactParticles, shotRay.point, objectImpactParticles.rotation );
+            if( shotRay.transform.tag == enemyTag )
+            {
+                Instantiate( bloodImpactParticles, shotRay.point, bloodImpactParticles.rotation );
+            } else
+            {
+                Instantiate( objectImpactParticles, shotRay.point, objectImpactParticles.rotation );
+            }
         }
     }
 
