@@ -43,12 +43,15 @@ public class WeaponBase : MonoBehaviour
 
         if( shotRay.transform )
         {
+            Vector3 instantiatePos = shotRay.point;
+            instantiatePos.z = -9f; // We want the particles to always be in front.
+
             if( shotRay.transform.tag == enemyTag )
             {
-                Instantiate( bloodImpactParticles, shotRay.point, bloodImpactParticles.rotation );
+                Instantiate( bloodImpactParticles, instantiatePos, bloodImpactParticles.rotation );
             } else
             {
-                Instantiate( objectImpactParticles, shotRay.point, objectImpactParticles.rotation );
+                Instantiate( objectImpactParticles, instantiatePos, objectImpactParticles.rotation );
             }
         }
     }
