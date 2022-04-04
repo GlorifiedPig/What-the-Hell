@@ -76,7 +76,7 @@ public class WeaponBase : MonoBehaviour
 
             StartCoroutine( SpawnTracer( shotRay ) );
 
-            if( ammo < 0 ) Reload();
+            if( ammo <= 0 ) Reload();
         }
     }
 
