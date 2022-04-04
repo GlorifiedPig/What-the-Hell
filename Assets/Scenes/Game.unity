@@ -2561,10 +2561,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   round: 0
-  maxEnemies: 15
+  maxEnemiesAlive: 24
   spawnTimer: 5
   timeBetweenRounds: 8
   zombieSpawnManager: {fileID: 841494919}
+  roundEnd: 1
+  aliveEnemies: 0
+  enemiesSpawned: 0
+  totalEnemiesThisRound: 0
 --- !u!114 &841494921
 MonoBehaviour:
   m_ObjectHideFlags: 0

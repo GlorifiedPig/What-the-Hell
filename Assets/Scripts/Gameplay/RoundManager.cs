@@ -6,7 +6,7 @@ using UnityEngine;
 public class RoundManager : MonoBehaviour
 {
     public int round = 0;
-    public int maxEnemiesAlive = 15;
+    public int maxEnemiesAlive = 24;
     public float spawnTimer = 5f;
     public float timeBetweenRounds = 8f;
     public ZombieSpawnManager zombieSpawnManager;
