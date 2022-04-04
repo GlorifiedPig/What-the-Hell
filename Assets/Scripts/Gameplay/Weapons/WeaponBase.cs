@@ -75,6 +75,8 @@ public class WeaponBase : MonoBehaviour
             BulletHit.Invoke( shotRay, Random.Range( minDamage, maxDamage ) );
 
             StartCoroutine( SpawnTracer( shotRay ) );
+
+            if( ammo < 0 ) Reload();
         }
     }
 
