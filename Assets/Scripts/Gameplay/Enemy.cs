@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Pathfinding;
 using System;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Enemy : MonoBehaviour
     public float healthPerRound = 100f;
     public float baseHealth = 150f;
     public float decayDelay = 5f;
+    public float minSpeed = 4f;
+    public float maxSpeed = 6f;
     public bool alive = true;
     public AIPath aiPath;
     public AIDestinationSetter aiDestinationSetter;
@@ -34,6 +37,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         aiDestinationSetter.target = GameObject.FindGameObjectWithTag( playerTag ).transform;
+        aiPath.maxSpeed = Random.Range( minSpeed, maxSpeed );
     }
 
     private void Update()
