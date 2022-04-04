@@ -17,8 +17,8 @@ public class WeaponHandler : MonoBehaviour
         GameObject oldWeapon = activeWeapon;
         activeWeapon = weapon;
         weapon.SetActive( true );
-        oldWeapon.SetActive( false );
         WeaponSwitched.Invoke( weapon, oldWeapon );
+        oldWeapon.SetActive( false );
     }
 
     public void Update()

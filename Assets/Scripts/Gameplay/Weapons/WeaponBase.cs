@@ -125,6 +125,7 @@ public class WeaponBase : MonoBehaviour
     public virtual void CancelReload()
     {
         if( !isReloading ) return;
+
         isReloading = false;
         CancelInvoke( nameof( FinishReload ) );
     }
