@@ -9,12 +9,16 @@ using Random = UnityEngine.Random;
 public class Enemy : MonoBehaviour
 {
     public string playerTag = "Player";
+    public GameObject playerObject;
+    public Player player;
     public Collider2D enemyCollider;
     public SpriteRenderer spriteRenderer;
     public Sprite deadSprite;
     public GameObject healthDisplay;
     public Transform canvas;
     public Image healthImage;
+    public float timeBetweenAttacks = 1f;
+    public float damageToPlayer = 34f;
     public float healthPerRound = 100f;
     public float baseHealth = 150f;
     public float decayDelay = 5f;
@@ -28,6 +32,7 @@ public class Enemy : MonoBehaviour
     public float health = 150f;
     private bool startedDecaying = false;
     private float deathFading = 1f;
+    private float nextAttack = 0f;
 
     public static event Action<Enemy> EnemyDeath = ( enemy ) => { };
 
@@ -36,7 +41,9 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        aiDestinationSetter.target = GameObject.FindGameObjectWithTag( playerTag ).transform;
+        playerObject = GameObject.FindGameObjectWithTag( playerTag );
+        aiDestinationSetter.target = playerObject.transform;
+        player = playerObject.GetComponent<Player>();
         aiPath.maxSpeed = Random.Range( minSpeed, maxSpeed );
     }
 
@@ -104,5 +111,12 @@ public class Enemy : MonoBehaviour
     {
         maxHealth = newHealth;
         health = newHealth;
+    }
+
+    public void AttackPlayer()
+    {
+        if( Time.time < nextAttack ) return;
+        player.TakeDamage( damageToPlayer );
+        nextAttack = Time.time + timeBetweenAttacks;
     }
 }
