@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public GameObject healthDisplay;
     public Transform canvas;
     public Image healthImage;
+    public float attackDistance = 2.5f;
     public float timeBetweenAttacks = 1f;
     public float damageToPlayer = 34f;
     public float healthPerRound = 100f;
@@ -68,6 +69,7 @@ public class Enemy : MonoBehaviour
             newColor.a = deathFading;
             spriteRenderer.color = newColor;
         }
+        else if( Time.time >= nextAttack && Vector2.Distance( transform.position, player.transform.position ) <= attackDistance ) AttackPlayer();
     }
 
     public void TakeDamage( float damage )

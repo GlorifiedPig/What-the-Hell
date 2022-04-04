@@ -2562,8 +2562,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   round: 0
   maxEnemiesAlive: 24
-  spawnTimer: 5
-  timeBetweenRounds: 8
+  spawnTimer: 2
+  timeBetweenRounds: 2
   zombieSpawnManager: {fileID: 841494919}
   roundEnd: 1
   aliveEnemies: 0
@@ -5456,6 +5456,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: armor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: armorImage
       value: 

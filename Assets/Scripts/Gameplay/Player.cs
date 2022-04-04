@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     {
         healthImage.fillAmount = Mathf.Lerp( healthImage.fillAmount, health / maxHealth, Time.deltaTime * 5f );
         armorImage.fillAmount = Mathf.Lerp( armorImage.fillAmount, armor / maxArmor, Time.deltaTime * 5f );
-        armorDisplay.SetActive( armor >= 0 );
+        armorDisplay.SetActive( armor > 0 );
     }
 
     public void Die()
