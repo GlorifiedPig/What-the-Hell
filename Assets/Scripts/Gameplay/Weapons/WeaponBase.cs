@@ -36,6 +36,10 @@ public class WeaponBase : MonoBehaviour
     public int ammo = 0;
     public float nextShot = 0f;
 
+
+    private void OnEnable() => WeaponHandler.WeaponSwitched += WeaponSwitched;
+    private void OnDisable() => WeaponHandler.WeaponSwitched -= WeaponSwitched;
+
     private void Start()
     {
         ammo = clipSize;
@@ -118,6 +122,13 @@ public class WeaponBase : MonoBehaviour
         CancelInvoke();
     }
 
+    public virtual void CancelReload()
+    {
+        if( !isReloading ) return;
+        isReloading = false;
+        CancelInvoke( nameof( FinishReload ) );
+    }
+
     public void HandleControls()
     {
         if( Input.GetMouseButtonDown( 0 ) ) Shoot();
@@ -147,5 +158,10 @@ public class WeaponBase : MonoBehaviour
         HandleWeaponCrosshair();
         HandleControls();
         HandleRotation();
+    }
+
+    private void WeaponSwitched( GameObject oldWeapon, GameObject newWeapon )
+    {
+        CancelReload();
     }
 }
