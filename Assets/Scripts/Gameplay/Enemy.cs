@@ -13,9 +13,11 @@ public class Enemy : MonoBehaviour
     public Image healthImage;
     public float maxHealth = 100f;
     public float health = 100f;
+    public float decayDelay = 5f;
     public bool alive = true;
     public AIPath aiPath;
 
+    private bool startedDecaying = false;
     private float deathFading = 1f;
 
     private void OnEnable() => WeaponBase.BulletHit += BulletHit;
@@ -32,9 +34,9 @@ public class Enemy : MonoBehaviour
         if( aiPath.desiredVelocity.x >= 0.01f ) transform.localScale = new Vector3( -1f, 1f, 1f );
         else transform.localScale = new Vector3( 1f, 1f, 1f );
 
-        if( !alive )
+        if( !alive && startedDecaying )
         {
-            deathFading -= Time.deltaTime / 8f;
+            deathFading -= Time.deltaTime / 5f;
             if( deathFading <= 0 ) { Destroy( gameObject ); return; }
             Color newColor = spriteRenderer.color;
             newColor.a = deathFading;
@@ -49,6 +51,12 @@ public class Enemy : MonoBehaviour
         health = newHealth;
     }
 
+    public void BeginDecay()
+    {
+        if( alive ) return;
+        startedDecaying = true;
+    }
+
     public void Die()
     {
         if( !alive ) return;
@@ -58,6 +66,7 @@ public class Enemy : MonoBehaviour
         transform.rotation = Quaternion.Euler( transform.rotation.x, transform.rotation.y, transform.rotation.z - 90f );
         healthDisplay.SetActive( false );
         enemyCollider.enabled = false;
+        Invoke( nameof( BeginDecay ), decayDelay );
     }
 
     private void BulletHit( RaycastHit2D ray, float damage )
