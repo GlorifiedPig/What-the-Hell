@@ -21,6 +21,8 @@ public class WeaponBase : MonoBehaviour
     public int clipSize = 10;
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
+    public float minDamage = 25f;
+    public float maxDamage= 50f;
     public AudioSource audioSource;
     public AudioClip[] gunshotSounds;
     public AudioClip reloadSound;
@@ -28,7 +30,7 @@ public class WeaponBase : MonoBehaviour
     public AudioClip[] impactSoundsFlesh;
 
     // Internal Fields
-    public static event Action<RaycastHit2D> BulletHit = ( raycastHit2D ) => { }; 
+    public static event Action<RaycastHit2D, float> BulletHit = ( raycastHit2D, damage ) => { }; 
     public bool isReloading = false;
     public int ammo = 0;
     public float nextShot = 0f;
@@ -69,7 +71,7 @@ public class WeaponBase : MonoBehaviour
                 audioSource.PlayOneShot( impactSoundsObjects[Random.Range( 0, impactSoundsObjects.Length - 1 )], 0.4f );
             }
 
-            BulletHit.Invoke( shotRay );
+            BulletHit.Invoke( shotRay, Random.Range( minDamage, maxDamage ) );
 
             StartCoroutine( SpawnTracer( shotRay ) );
         }
