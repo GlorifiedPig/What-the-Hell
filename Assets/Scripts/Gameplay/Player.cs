@@ -34,9 +34,24 @@ public class Player : MonoBehaviour
 
     public void TakeDamage( float damage )
     {
-        float newHealth = Mathf.Max( health - damage, 0 );
-        if( newHealth <= 0 ) Die();
-        health = newHealth;
+        if( armor > 0 )
+        {
+            float newArmor = armor - damage;
+            if( newArmor < 0 )
+            {
+                damage = Mathf.Abs( newArmor ); // The damage left over is whatever the armor goes into the negatives.
+                newArmor = 0;
+            } else damage = 0;
+            armor = newArmor;
+        }
+
+        if( damage > 0 )
+        {
+            float newHealth = Mathf.Max( health - damage, 0 );
+            if( newHealth <= 0 ) Die();
+            health = newHealth;
+        }
+
         audioSource.PlayOneShot( damagedAudio[Random.Range( 0, damagedAudio.Length )] );
     }
 }

@@ -5468,6 +5468,26 @@ PrefabInstance:
       propertyPath: armorDisplay
       value: 
       objectReference: {fileID: 6257020690061599881}
+    - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: damagedAudio.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: damagedAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 95e29b34045e9df4eabf5c7f96bcd368, type: 3}
+    - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: damagedAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a12010d96f4c9f40b82037697df8c35, type: 3}
+    - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: damagedAudio.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 112f7f75a7fba754f8ccf2bfddc4f988, type: 3}
+    - target: {fileID: 1538982537, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: damagedAudio.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2018020b09e1e304299ed8110293eaa3, type: 3}
     - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: playerCam
       value: 
