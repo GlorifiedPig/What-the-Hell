@@ -4673,10 +4673,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music:
-  - {fileID: 8300000, guid: 389ed8c82b0f4e84eb937bb4fb37045b, type: 3}
   - {fileID: 8300000, guid: bba6196a514d8284e8ce6441a3aa031e, type: 3}
+  - {fileID: 8300000, guid: 389ed8c82b0f4e84eb937bb4fb37045b, type: 3}
   musicPlayer: {fileID: 1664718277}
-  musicVolume: 0.35
+  musicVolume: 0.4
   musicState: 0
   transitionTime: 0.2
 --- !u!82 &1664718277

@@ -5,7 +5,7 @@ public class MusicManager : MonoBehaviour
 {
     public AudioClip[] music;
     public AudioSource musicPlayer;
-    public float musicVolume = 0.35f;
+    public float musicVolume = 0.4f;
 
     public int musicState = 0;
 
@@ -14,7 +14,6 @@ public class MusicManager : MonoBehaviour
     public float transitionTime = 0.2f;
 
     bool switchingMusic = false;
-
 
     void PlayAppropriateMusic()
     {
