@@ -9024,7 +9024,7 @@ MonoBehaviour:
   reloadTime: 1.5
   minDamage: 10
   maxDamage: 35
-  spread: 0.2
+  spread: 0.075
   audioSource: {fileID: 5469868236854460739}
   gunshotSounds:
   - {fileID: 8300000, guid: 00962e7809f46f645807942af1cb1ee6, type: 3}
@@ -9480,11 +9480,11 @@ MonoBehaviour:
   tracer: {fileID: 1320442777640840982, guid: d8afb18c9f18f5e45a95e0fe842d9916, type: 3}
   enemyTag: Enemy
   clipSize: 6
-  timeBetweenShots: 0.1
+  timeBetweenShots: 0.82
   reloadTime: 6
-  minDamage: 100
-  maxDamage: 150
-  spread: 0
+  minDamage: 40
+  maxDamage: 110
+  spread: 0.15
   audioSource: {fileID: 1623932329}
   gunshotSounds:
   - {fileID: 8300000, guid: 17f26df171232664994d5410654492e3, type: 3}
@@ -9503,6 +9503,7 @@ MonoBehaviour:
   isReloading: 0
   ammo: 0
   nextShot: 0
+  slugs: 6
 --- !u!1 &9049773489301788989
 GameObject:
   m_ObjectHideFlags: 0

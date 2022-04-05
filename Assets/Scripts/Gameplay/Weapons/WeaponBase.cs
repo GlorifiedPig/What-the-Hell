@@ -82,7 +82,7 @@ public class WeaponBase : MonoBehaviour
 
             float damage = Random.Range( minDamage, maxDamage );
             if( PowerupManager.activePowerup == PowerupManager.ActivePowerup.DoubleDamage ) damage = damage * 2;
-            BulletHit.Invoke( shotRay, damage );
+            InvokeBulletHit( shotRay, damage );
 
             StartCoroutine( SpawnTracer( shotRay ) );
 
@@ -112,7 +112,7 @@ public class WeaponBase : MonoBehaviour
     {
         if( isReloading ) return;
 
-        audioSource.PlayOneShot( reloadSound );
+        if( reloadSound ) audioSource.PlayOneShot( reloadSound );
         isReloading = true;
         Invoke( nameof( FinishReload ), reloadTime );
     }
@@ -133,6 +133,8 @@ public class WeaponBase : MonoBehaviour
         isReloading = false;
         CancelInvoke( nameof( FinishReload ) );
     }
+
+    public void InvokeBulletHit( RaycastHit2D shotRay, float damage ) => BulletHit.Invoke( shotRay, damage );
 
     public void HandleControls()
     {
