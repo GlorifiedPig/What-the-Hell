@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public Image healthImage;
     public Image armorImage;
     public GameObject armorDisplay;
+    public GameObject deathOverlay;
     public float maxHealth = 100f;
     public float health = 100f;
     public float armor = 0f;
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
         alive = false;
         spriteRenderer.sprite = deadSprite;
         PlayerDeath.Invoke();
+        deathOverlay.SetActive( true );
     }
 
     public void TakeDamage( float damage )
