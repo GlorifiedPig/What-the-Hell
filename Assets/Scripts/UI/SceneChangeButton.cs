@@ -13,4 +13,10 @@ public class SceneChangeButton : MonoBehaviour
     {
         SceneManager.SetActiveScene( SceneManager.GetActiveScene() );
     }
+
+    public void ExitGame()
+    {
+        Debug.Log( "Closing game..." );
+        Application.Quit();
+    }
 }
