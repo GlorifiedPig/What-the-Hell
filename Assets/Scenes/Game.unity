@@ -8033,7 +8033,7 @@ MonoBehaviour:
   round: 0
   maxEnemiesAlive: 18
   spawnTimer: 2
-  timeBetweenRounds: 5
+  timeBetweenRounds: 3
   zombieSpawnManager: {fileID: 841494919}
   roundEnd: 1
   aliveEnemies: 0
