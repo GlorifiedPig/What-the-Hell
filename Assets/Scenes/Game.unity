@@ -1324,18 +1324,16 @@ MonoBehaviour:
     type: 3}
   tracer: {fileID: 1320442777640840982, guid: d8afb18c9f18f5e45a95e0fe842d9916, type: 3}
   enemyTag: Enemy
-  clipSize: 6
-  timeBetweenShots: 1.35
-  reloadTime: 1.5
-  minDamage: 125
-  maxDamage: 250
+  clipSize: 8
+  timeBetweenShots: 1.23
+  reloadTime: 5
+  minDamage: 150
+  maxDamage: 400
   spread: 0
   audioSource: {fileID: 280021304}
   gunshotSounds:
-  - {fileID: 8300000, guid: 00962e7809f46f645807942af1cb1ee6, type: 3}
-  - {fileID: 8300000, guid: e701f99b66cb74b49af901fc3d27fb74, type: 3}
-  - {fileID: 8300000, guid: a87063811f2581e47af0cadc3cfafda9, type: 3}
-  reloadSound: {fileID: 8300000, guid: cc58b75170659804c9357e9b08bb89e9, type: 3}
+  - {fileID: 8300000, guid: a981ace435781294db7154e1083c69ed, type: 3}
+  reloadSound: {fileID: 8300000, guid: d3332b2924c5fb64797bc33a2f01210f, type: 3}
   impactSoundsObjects:
   - {fileID: 8300000, guid: f37065e2640b49546b66fba2c86e55ee, type: 3}
   - {fileID: 8300000, guid: 5c3a5f6d425304044be92b2ade599060, type: 3}
@@ -9480,7 +9478,7 @@ MonoBehaviour:
   tracer: {fileID: 1320442777640840982, guid: d8afb18c9f18f5e45a95e0fe842d9916, type: 3}
   enemyTag: Enemy
   clipSize: 6
-  timeBetweenShots: 0.82
+  timeBetweenShots: 1.05
   reloadTime: 6
   minDamage: 40
   maxDamage: 110
