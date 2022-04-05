@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     public float minSpeed = 4f;
     public float maxSpeed = 6f;
     public bool alive = true;
+    public bool rotateOnDeath = true;
     public AIPath aiPath;
     public AIDestinationSetter aiDestinationSetter;
 
@@ -100,7 +101,7 @@ public class Enemy : MonoBehaviour
         aiPath.canMove = false;
         alive = false;
         spriteRenderer.sprite = deadSprite;
-        transform.rotation = Quaternion.Euler( transform.rotation.x, transform.rotation.y, transform.rotation.z - 90f );
+        if( rotateOnDeath ) transform.rotation = Quaternion.Euler( transform.rotation.x, transform.rotation.y, transform.rotation.z - 90f );
         healthDisplay.SetActive( false );
         enemyCollider.enabled = false;
         Invoke( nameof( BeginDecay ), decayDelay );

@@ -295,6 +295,7 @@ MonoBehaviour:
   minSpeed: 7.5
   maxSpeed: 10
   alive: 1
+  rotateOnDeath: 0
   aiPath: {fileID: 6070754783971900250}
   aiDestinationSetter: {fileID: 6070754783971900252}
   maxHealth: 100
