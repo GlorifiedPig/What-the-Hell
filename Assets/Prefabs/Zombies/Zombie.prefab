@@ -289,12 +289,13 @@ MonoBehaviour:
   attackDistance: 5
   timeBetweenAttacks: 1
   damageToPlayer: 34
-  healthPerRound: 100
-  baseHealth: 150
+  healthPerRound: 50
+  baseHealth: 125
   decayDelay: 5
   minSpeed: 4
   maxSpeed: 6
   alive: 1
+  rotateOnDeath: 1
   aiPath: {fileID: 6070754783971900250}
   aiDestinationSetter: {fileID: 6070754783971900252}
   maxHealth: 100

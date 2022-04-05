@@ -1123,8 +1123,8 @@ MonoBehaviour:
   clipSize: 6
   timeBetweenShots: 1.35
   reloadTime: 1.5
-  minDamage: 100
-  maxDamage: 200
+  minDamage: 125
+  maxDamage: 250
   audioSource: {fileID: 280021304}
   gunshotSounds:
   - {fileID: 8300000, guid: 00962e7809f46f645807942af1cb1ee6, type: 3}
@@ -7726,9 +7726,9 @@ MonoBehaviour:
   gameAudioSource: {fileID: 1836980900}
   gameStartSound: {fileID: 8300000, guid: cf92b1819aaee004b8b1c8fdd10b5b5e, type: 3}
   round: 0
-  maxEnemiesAlive: 24
+  maxEnemiesAlive: 18
   spawnTimer: 2
-  timeBetweenRounds: 2
+  timeBetweenRounds: 5
   zombieSpawnManager: {fileID: 841494919}
   roundEnd: 1
   aliveEnemies: 0
@@ -8617,8 +8617,8 @@ MonoBehaviour:
   clipSize: 30
   timeBetweenShots: 0.2
   reloadTime: 1.5
-  minDamage: 5
-  maxDamage: 25
+  minDamage: 10
+  maxDamage: 35
   audioSource: {fileID: 5469868236854460739}
   gunshotSounds:
   - {fileID: 8300000, guid: 00962e7809f46f645807942af1cb1ee6, type: 3}
@@ -8792,13 +8792,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 2018020b09e1e304299ed8110293eaa3, type: 3}
     - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: clipSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: maxDamage
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: minDamage
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: reloadTime
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: crosshairHandler
       value: 
       objectReference: {fileID: 841494918}
+    - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: preventShootingLayers.m_Bits
       value: 64
@@ -9056,8 +9076,8 @@ MonoBehaviour:
   clipSize: 6
   timeBetweenShots: 0.1
   reloadTime: 6
-  minDamage: 75
-  maxDamage: 125
+  minDamage: 100
+  maxDamage: 150
   audioSource: {fileID: 1623932329}
   gunshotSounds:
   - {fileID: 8300000, guid: 17f26df171232664994d5410654492e3, type: 3}
