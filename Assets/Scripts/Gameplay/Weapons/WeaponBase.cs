@@ -24,6 +24,7 @@ public class WeaponBase : MonoBehaviour
     public float reloadTime = 1.25f;
     public float minDamage = 25f;
     public float maxDamage = 50f;
+    public float spread = 0f;
     public AudioSource audioSource;
     public AudioClip[] gunshotSounds;
     public AudioClip reloadSound;
@@ -55,7 +56,9 @@ public class WeaponBase : MonoBehaviour
     {
         if( !CanShoot() ) return;
 
-        RaycastHit2D shotRay = Physics2D.Raycast( shootPoint.position, shootPoint.TransformDirection( Vector2.right ), 100, raycastFilter );
+        Vector2 direction = Vector2.right;
+        direction.y += Random.Range( -spread, spread );
+        RaycastHit2D shotRay = Physics2D.Raycast( shootPoint.position, shootPoint.TransformDirection( direction ), 100, raycastFilter );
 
         if( shotRay.transform )
         {

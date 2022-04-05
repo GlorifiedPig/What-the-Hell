@@ -31,12 +31,7 @@ public class RoundManager : MonoBehaviour
         if( round == 1 ) gameAudioSource.PlayOneShot( gameStartSound );
         roundEnd = false;
         enemiesSpawned = 0;
-        totalEnemiesThisRound = Mathf.RoundToInt( (float)( 0.000058 * Mathf.Pow( round, 3 ) + 0.074032 * Mathf.Pow( round, 2 ) + 0.718119 * round + 14.738699 ) );
-
-        for(int i = 1; i < 21; i++ )
-        {
-            Debug.Log( "Round: " + i + ", Zombies: " + Mathf.RoundToInt( (float)( 0.00005 * Mathf.Pow( i, 3.45f ) + 0.05 * Mathf.Pow( i, 2 ) + 0.5 * i + 12 ) ) );
-        }
+        totalEnemiesThisRound = Mathf.RoundToInt( (float)( 0.00005 * Mathf.Pow( round, 3.45f ) + 0.05 * Mathf.Pow( round, 2 ) + 0.5 * round + 12 ) );
     }
 
     public void EndRound()

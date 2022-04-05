@@ -1329,6 +1329,7 @@ MonoBehaviour:
   reloadTime: 1.5
   minDamage: 125
   maxDamage: 250
+  spread: 0
   audioSource: {fileID: 280021304}
   gunshotSounds:
   - {fileID: 8300000, guid: 00962e7809f46f645807942af1cb1ee6, type: 3}
@@ -9023,6 +9024,7 @@ MonoBehaviour:
   reloadTime: 1.5
   minDamage: 10
   maxDamage: 35
+  spread: 0.2
   audioSource: {fileID: 5469868236854460739}
   gunshotSounds:
   - {fileID: 8300000, guid: 00962e7809f46f645807942af1cb1ee6, type: 3}
@@ -9482,6 +9484,7 @@ MonoBehaviour:
   reloadTime: 6
   minDamage: 100
   maxDamage: 150
+  spread: 0
   audioSource: {fileID: 1623932329}
   gunshotSounds:
   - {fileID: 8300000, guid: 17f26df171232664994d5410654492e3, type: 3}
