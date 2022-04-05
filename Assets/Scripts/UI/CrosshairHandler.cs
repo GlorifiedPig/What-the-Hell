@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,8 +14,14 @@ public class CrosshairHandler : MonoBehaviour
 
     private void Update()
     {
-        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.None;
-        crosshair.transform.position = Input.mousePosition;
+        if( Player.alive )
+        {
+            Cursor.visible = false;
+            crosshair.transform.position = Input.mousePosition;
+        } else
+        {
+            Cursor.visible = true;
+        }
     }
 }
