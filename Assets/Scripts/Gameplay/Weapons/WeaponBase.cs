@@ -23,15 +23,16 @@ public class WeaponBase : MonoBehaviour
     public float timeBetweenShots = 0.35f;
     public float reloadTime = 1.25f;
     public float minDamage = 25f;
-    public float maxDamage= 50f;
+    public float maxDamage = 50f;
     public AudioSource audioSource;
     public AudioClip[] gunshotSounds;
     public AudioClip reloadSound;
     public AudioClip[] impactSoundsObjects;
     public AudioClip[] impactSoundsFlesh;
+    public bool automatic = false;
 
     // Internal Fields
-    public static event Action<RaycastHit2D, float> BulletHit = ( raycastHit2D, damage ) => { }; 
+    public static event Action<RaycastHit2D, float> BulletHit = ( raycastHit2D, damage ) => { };
     public bool isReloading = false;
     public int ammo = 0;
     public float nextShot = 0f;
@@ -62,7 +63,7 @@ public class WeaponBase : MonoBehaviour
             nextShot = Time.time + timeBetweenShots;
 
             audioSource.PlayOneShot( gunshotSounds[Random.Range( 0, gunshotSounds.Length )] );
-        
+
             Vector3 instantiatePos = shotRay.point;
             instantiatePos.z = -9f; // We want the particles to always be in front.
 
@@ -132,7 +133,7 @@ public class WeaponBase : MonoBehaviour
 
     public void HandleControls()
     {
-        if( Input.GetMouseButtonDown( 0 ) ) Shoot();
+        if( ( automatic && Input.GetMouseButton( 0 ) ) || ( Input.GetMouseButtonDown( 0 ) ) ) Shoot();
         if( Input.GetKeyDown( KeyCode.R ) ) Reload();
     }
 
