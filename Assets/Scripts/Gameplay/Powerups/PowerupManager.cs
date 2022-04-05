@@ -13,7 +13,7 @@ public class PowerupManager : MonoBehaviour
 
     public Player player;
     public AudioSource audioSource;
-    public float powerupChance = 0.1f;
+    public float powerupChance = 0.15f;
 
     public static PowerupManager Instance;
     public static ActivePowerup activePowerup = ActivePowerup.None;
@@ -45,7 +45,7 @@ public class PowerupManager : MonoBehaviour
         activePowerup = ActivePowerup.None;
     }
 
-    public void SpawnPowerup( Vector2 position )
+    public void SpawnPowerup( Vector3 position )
     {
         List<GameObject> powerupPool = new List<GameObject>();
 
@@ -57,6 +57,7 @@ public class PowerupManager : MonoBehaviour
             powerupPool.Add( speedPowerup );
         }
 
+        position.z = -20f;
         if( powerupPool.Count > 0 ) Instantiate( powerupPool[Random.Range( 0, powerupPool.Count )], position, Quaternion.identity );
     }
 

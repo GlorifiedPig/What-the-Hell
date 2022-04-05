@@ -187,19 +187,19 @@ MonoBehaviour:
     You have infinite ammo, use it wisely.
 
 
-    The longer you
-    hold them off, the stronger they get.
+    The longer you hold
+    them off, the stronger they get.
 
 
-    Use your arsenal wisely. You will
-    also get stronger as time goes on through powerups.
+    Use your arsenal wisely. You will also
+    get stronger as time goes on through powerups.
 
 
     Good luck.
 
 
-    Press
-    Space to start'
+    Press Space
+    to start'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 89b5603de6d276f44a8b5b448ada4082, type: 2}
   m_sharedMaterial: {fileID: -1798571801704683453, guid: 89b5603de6d276f44a8b5b448ada4082,
@@ -1113,7 +1113,7 @@ MonoBehaviour:
     m_Bits: 320
   preventShootingLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 64
   objectImpactParticles: {fileID: 4021012967328986432, guid: e0f682e01c6ba094da8080a6c8416801,
     type: 3}
   bloodImpactParticles: {fileID: 7695387501572038028, guid: 5b5da9f13c1ee8c4181fc383ee833cde,
@@ -4741,7 +4741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1791109706}
   audioSource: {fileID: 1032987833}
-  powerupChance: 0.1
+  powerupChance: 0.2
   healthPowerup: {fileID: 2118682511808524227, guid: a36826ff7b13b3b439435dc1006ad19e,
     type: 3}
   armorPowerup: {fileID: 2118682511808524227, guid: bfb9dfce6f813d344a1a901c84f1cae4,
@@ -8607,7 +8607,7 @@ MonoBehaviour:
     m_Bits: 320
   preventShootingLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 64
   objectImpactParticles: {fileID: 4021012967328986432, guid: e0f682e01c6ba094da8080a6c8416801,
     type: 3}
   bloodImpactParticles: {fileID: 7695387501572038028, guid: 5b5da9f13c1ee8c4181fc383ee833cde,
@@ -8801,7 +8801,7 @@ PrefabInstance:
       objectReference: {fileID: 841494918}
     - target: {fileID: 1896309307, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7, type: 3}
       propertyPath: preventShootingLayers.m_Bits
-      value: 512
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 1381115027153474415, guid: 0f81e0ff9f4eb704faac9ba65e52b2b7,
         type: 3}
@@ -9046,7 +9046,7 @@ MonoBehaviour:
     m_Bits: 320
   preventShootingLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 64
   objectImpactParticles: {fileID: 4021012967328986432, guid: e0f682e01c6ba094da8080a6c8416801,
     type: 3}
   bloodImpactParticles: {fileID: 7695387501572038028, guid: 5b5da9f13c1ee8c4181fc383ee833cde,
